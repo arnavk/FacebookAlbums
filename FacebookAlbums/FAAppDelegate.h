@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FAViewController.h"
+#import "FAAlbumsTableViewController.h"
+#import "FALoginViewController.h"
 
 @interface FAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) UINavigationController *navController;
+@property (strong, nonatomic) FAAlbumsTableViewController *albumsTableViewController;
+@property (strong, nonatomic) FAViewController *mainViewController;
+//- (void)openSession;
 @end
