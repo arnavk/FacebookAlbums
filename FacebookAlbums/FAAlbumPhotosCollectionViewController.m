@@ -9,6 +9,7 @@
 #import "FAAlbumPhotosCollectionViewController.h"
 #import "FAPhotoCollectionViewCell.h"
 #import "FAFacebookFetcher.h"
+#import "FAPhotoViewController.h"
 
 @interface FAAlbumPhotosCollectionViewController ()
 @property (nonatomic, strong) NSArray *photos;
@@ -52,6 +53,14 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+    NSDictionary *photo = [self.photos objectAtIndex:selectedIndexPath.row];
+    [segue.destinationViewController setPicture:photo];
+    [segue.destinationViewController setTitle:@"Photo"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -80,7 +89,7 @@
     FAPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"photo" forIndexPath:indexPath];
     
     NSDictionary *photo = [self.photos objectAtIndex:indexPath.row];
-    NSURL *photoURL = [NSURL URLWithString:[[[photo valueForKeyPath:@"images"] objectAtIndex:3] valueForKey:@"source"]];
+    NSURL *photoURL = [NSURL URLWithString:[[[photo valueForKeyPath:@"images"] objectAtIndex:4] valueForKey:@"source"]];
     cell.photo.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:photoURL]];
     
     return cell;

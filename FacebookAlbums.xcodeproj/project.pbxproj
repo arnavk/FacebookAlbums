@@ -26,6 +26,7 @@
 		1522CFC216B835810055B7B4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522CFC116B835810055B7B4 /* Accounts.framework */; };
 		1522CFC416B835890055B7B4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522CFC316B835890055B7B4 /* AdSupport.framework */; };
 		1522CFC616B8358F0055B7B4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1522CFC516B8358F0055B7B4 /* Social.framework */; };
+		15499F1916BD5F7700ADC575 /* FAPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15499F1816BD5F7700ADC575 /* FAPhotoViewController.m */; };
 		15A0E9A716B96EF300A25FAE /* FAFacebookFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0E9A616B96EF200A25FAE /* FAFacebookFetcher.m */; };
 		15A0E9AA16B9AE8600A25FAE /* FAAlbumPhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0E9A916B9AE8600A25FAE /* FAAlbumPhotosCollectionViewController.m */; };
 		15A0E9AE16BA558D00A25FAE /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A0E9AD16BA558D00A25FAE /* AlbumCell.xib */; };
@@ -60,6 +61,8 @@
 		1522CFC116B835810055B7B4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		1522CFC316B835890055B7B4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		1522CFC516B8358F0055B7B4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		15499F1716BD5F7700ADC575 /* FAPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FAPhotoViewController.h; path = ../FAPhotoViewController.h; sourceTree = "<group>"; };
+		15499F1816BD5F7700ADC575 /* FAPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FAPhotoViewController.m; path = ../FAPhotoViewController.m; sourceTree = "<group>"; };
 		15A0E9A516B96EF200A25FAE /* FAFacebookFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAFacebookFetcher.h; sourceTree = "<group>"; };
 		15A0E9A616B96EF200A25FAE /* FAFacebookFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAFacebookFetcher.m; sourceTree = "<group>"; };
 		15A0E9A816B9AE8600A25FAE /* FAAlbumPhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAAlbumPhotosCollectionViewController.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				15A0E9A916B9AE8600A25FAE /* FAAlbumPhotosCollectionViewController.m */,
 				150E1A2F16B83A3100993BFC /* FAAlbumsTableViewController.h */,
 				150E1A3016B83A3100993BFC /* FAAlbumsTableViewController.m */,
+				15499F1716BD5F7700ADC575 /* FAPhotoViewController.h */,
+				15499F1816BD5F7700ADC575 /* FAPhotoViewController.m */,
 				15A0E9AD16BA558D00A25FAE /* AlbumCell.xib */,
 				15A0E9A516B96EF200A25FAE /* FAFacebookFetcher.h */,
 				15A0E9A616B96EF200A25FAE /* FAFacebookFetcher.m */,
@@ -245,6 +250,7 @@
 				15A0E9AA16B9AE8600A25FAE /* FAAlbumPhotosCollectionViewController.m in Sources */,
 				15A0E9B116BA5C0900A25FAE /* FAAlbumCell.m in Sources */,
 				15A0E9B416BAAD7E00A25FAE /* FAPhotoCollectionViewCell.m in Sources */,
+				15499F1916BD5F7700ADC575 /* FAPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

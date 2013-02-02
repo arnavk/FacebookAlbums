@@ -111,39 +111,43 @@
             </objects>
             <point key="canvasLocation" x="1096" y="63"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo View Controller-->
         <scene sceneID="rWL-49-6Ch">
             <objects>
-                <viewController id="kxO-hb-9HK" sceneMemberID="viewController">
+                <viewController id="kxO-hb-9HK" customClass="FAPhotoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9K9-4Q-Ecy">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1b-my-kXR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8U-l2-9iL">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IhV-gx-aMo"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckJ-0v-qpR"/>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="IhV-gx-aMo" firstAttribute="top" secondItem="X1b-my-kXR" secondAttribute="top" type="default" id="00Y-3Q-Eny"/>
-                                    <constraint firstItem="IhV-gx-aMo" firstAttribute="trailing" secondItem="X1b-my-kXR" secondAttribute="trailing" type="default" id="4s6-HQ-4wt"/>
-                                    <constraint firstItem="IhV-gx-aMo" firstAttribute="bottom" secondItem="X1b-my-kXR" secondAttribute="bottom" type="default" id="Kys-TH-5UT"/>
-                                    <constraint firstItem="IhV-gx-aMo" firstAttribute="leading" secondItem="X1b-my-kXR" secondAttribute="leading" type="default" id="Wrx-DI-4Tg"/>
-                                    <constraint firstItem="IhV-gx-aMo" firstAttribute="centerY" secondItem="X1b-my-kXR" secondAttribute="centerY" type="default" id="dNs-BM-e1v"/>
-                                    <constraint firstItem="IhV-gx-aMo" firstAttribute="centerX" secondItem="X1b-my-kXR" secondAttribute="centerX" type="default" id="vid-GD-eu1"/>
+                                    <constraint firstItem="ckJ-0v-qpR" firstAttribute="centerY" secondItem="c8U-l2-9iL" secondAttribute="centerY" type="default" id="SnV-n7-qhA"/>
+                                    <constraint firstItem="ckJ-0v-qpR" firstAttribute="top" secondItem="c8U-l2-9iL" secondAttribute="top" type="default" id="YVE-yv-xNW"/>
+                                    <constraint firstItem="ckJ-0v-qpR" firstAttribute="bottom" secondItem="c8U-l2-9iL" secondAttribute="bottom" type="default" id="iNC-P9-jVx"/>
+                                    <constraint firstItem="ckJ-0v-qpR" firstAttribute="leading" secondItem="c8U-l2-9iL" secondAttribute="leading" type="default" id="o0B-dc-Jek"/>
+                                    <constraint firstItem="ckJ-0v-qpR" firstAttribute="centerX" secondItem="c8U-l2-9iL" secondAttribute="centerX" type="default" id="pDd-G8-MNO"/>
+                                    <constraint firstItem="ckJ-0v-qpR" firstAttribute="trailing" secondItem="c8U-l2-9iL" secondAttribute="trailing" type="default" id="td4-0i-V0s"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="X1b-my-kXR" firstAttribute="top" secondItem="9K9-4Q-Ecy" secondAttribute="top" type="default" id="LAf-6Z-Set"/>
-                            <constraint firstItem="X1b-my-kXR" firstAttribute="leading" secondItem="9K9-4Q-Ecy" secondAttribute="leading" type="default" id="PbP-0D-gCl"/>
-                            <constraint firstItem="X1b-my-kXR" firstAttribute="bottom" secondItem="9K9-4Q-Ecy" secondAttribute="bottom" type="default" id="lZJ-NT-bcf"/>
-                            <constraint firstItem="X1b-my-kXR" firstAttribute="trailing" secondItem="9K9-4Q-Ecy" secondAttribute="trailing" type="default" id="zs2-Yx-zto"/>
+                            <constraint firstItem="c8U-l2-9iL" firstAttribute="leading" secondItem="9K9-4Q-Ecy" secondAttribute="leading" type="default" id="B2A-sj-XiB"/>
+                            <constraint firstItem="c8U-l2-9iL" firstAttribute="trailing" secondItem="9K9-4Q-Ecy" secondAttribute="trailing" type="default" id="THI-pJ-2fZ"/>
+                            <constraint firstItem="c8U-l2-9iL" firstAttribute="bottom" secondItem="9K9-4Q-Ecy" secondAttribute="bottom" type="default" id="pxr-nO-Y0z"/>
+                            <constraint firstItem="c8U-l2-9iL" firstAttribute="top" secondItem="9K9-4Q-Ecy" secondAttribute="top" type="default" id="stG-tp-BGR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3jJ-V0-QSW">
                         <barButtonItem key="rightBarButtonItem" title="Like" id="73U-wU-Zbo"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="ckJ-0v-qpR" id="LVX-5S-HBV"/>
+                        <outlet property="scrollView" destination="c8U-l2-9iL" id="5GW-m3-N0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBN-Zz-3TN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +187,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="photo" destination="qhO-ww-7Rz" id="57Z-wu-NJv"/>
-                                    <segue destination="kxO-hb-9HK" kind="push" id="wTH-Nw-1wr"/>
+                                    <segue destination="kxO-hb-9HK" kind="push" id="1Ws-mE-1VU"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -233,6 +237,9 @@
         </class>
         <class className="FAAlbumsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FAAlbumsTableViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pull:"/>
+            </relationships>
         </class>
         <class className="FALoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FALoginViewController.h"/>
@@ -245,6 +252,12 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FAPhotoCollectionViewCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="photo" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="FAPhotoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FAPhotoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
@@ -261,6 +274,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
