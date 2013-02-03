@@ -53,6 +53,10 @@
     
 }
 
+- (IBAction)likeAlubm:(id)sender {
+    [FAFacebookFetcher likeObjectWithID:[self.album valueForKey:FACEBOOK_ALBUM_ID]];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];

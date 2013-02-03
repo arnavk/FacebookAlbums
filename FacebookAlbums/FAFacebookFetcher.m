@@ -48,4 +48,28 @@
     return [[self executeFacebookFetch:request] valueForKeyPath:@"data"];
 }
 
++ (void) likeObjectWithID: (NSString *)objectID
+{
+    NSString *graphPath = [NSString stringWithFormat:@"%@/likes", objectID];
+    FBRequest *request = [FBRequest requestWithGraphPath:graphPath
+                                              parameters:nil
+                                              HTTPMethod:@"POST"];
+    FBRequestConnection *connection = [[FBRequestConnection alloc] init];
+    [connection addRequest:request
+         completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+             
+             if (!error) {
+                 
+                 NSLog(@"Photo uploaded successfuly! %@",result);
+                 
+             } else {
+                 
+                 NSLog(@"Photo uploaded failed :( %@",error.userInfo);
+             }
+             
+         }];
+    
+    [connection start];
+}
+
 @end

@@ -106,7 +106,7 @@
 {
     NSLog(@"In showLoginView of TVC");
     
-    FALoginViewController* loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"test1"];
+    FALoginViewController* loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
     loginViewController.delegate = self;
     [self presentViewController:loginViewController animated:NO completion:nil];
 }
@@ -152,6 +152,14 @@
 - (void)openSessionAndDismissViewController:(FALoginViewController *)fblvc
 {
     NSLog(@"In the table view controller waiting to dismiss");
+    NSArray *permissions = [NSArray arrayWithObjects:@"publish_actions", nil];
+//    [FBSession openActiveSessionWithPublishPermissions:permissions
+//                                       defaultAudience:FBSessionDefaultAudienceFriends
+//                                          allowLoginUI:YES
+//                                     completionHandler:
+//     ^(FBSession *session,                                                                                                                                                        FBSessionState state, NSError *error) {
+//        [self sessionStateChanged:session state:state error:error loginViewController:fblvc];
+//    }];
     [FBSession openActiveSessionWithReadPermissions:nil
                                        allowLoginUI:YES
                                   completionHandler:

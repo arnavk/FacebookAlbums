@@ -18,4 +18,5 @@
 + (NSArray *) albums;
 + (NSURL *)urlStringForPhotoWithID:(NSString *)photoID;
 + (NSArray *) photosInAlbumWithAlbumID:(NSString *)albumID;
++ (void) likeObjectWithID:(NSString *)objectID;
 @end
